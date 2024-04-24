@@ -1,4 +1,4 @@
-# GitLab CICD
+![image](https://github.com/famasboy888/GitLab__CICD/assets/23441168/f160b829-3f57-4359-be1f-8df320a39cc5)# GitLab CICD
 
 ## 1) Push or store code in GitLab repository.
 
@@ -80,4 +80,27 @@ You will have a sequenced job after:
   <img width="40%" height="40%" src="https://github.com/famasboy888/GitLab__CICD/assets/23441168/f96132a5-c10a-477e-b2a7-a486506e1092">
 </p>
 
-### 2.4)
+## 3) Create Deploy Application
+
+### 3.1) First we need to create an instance server. I will use AWS EC2 instance.
+
+<p align="left">
+  <img width="40%" height="40%" src="https://github.com/famasboy888/GitLab__CICD/assets/23441168/de7359be-5e48-4748-83a2-a1ddaf4927f7">
+</p>
+
+Copy the contents of `AWS key pair` and store it in GitLab CI/CD `variable settings`
+
+<p align="left">
+  <img width="40%" height="40%" src="https://github.com/famasboy888/GitLab__CICD/assets/23441168/b5320c21-39aa-4006-8f44-a8a2275b6e57">
+</p>
+
+Note: Save it as a `File`
+
+<p align="left">
+  <img width="40%" height="40%" src="https://github.com/famasboy888/GitLab__CICD/assets/23441168/7ced949b-4f2a-44b8-bda7-c6bb31e755a8">
+</p>
+
+
+
+
+
