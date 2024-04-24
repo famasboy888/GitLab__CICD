@@ -100,6 +100,34 @@ Note: Save it as a `File`
   <img width="40%" height="40%" src="https://github.com/famasboy888/GitLab__CICD/assets/23441168/7ced949b-4f2a-44b8-bda7-c6bb31e755a8">
 </p>
 
+### 3.2) Add deploy job
+
+```yaml
+deploy_app:
+    stage: deploy
+    before_script:
+        - chmod 400 $AWS_KEYPAIR                   <== We need to change chmod to 400 to get rid of permission error                                    
+    script:
+        - ssh -o StrictHostKeyChecking=no -i $AWS_KEYPAIR ubuntu@$AWS_INSTANCE_IP "           <== 'StrictHostKeyChecking=no' will disable prompt when connecting via SSH
+            docker login -u $DOCKERHUB_USER -p $DOCKERHUB_SECRET &&                  
+            docker stop flask-app-run || true && docker rm flask-app-run || true &&           <== Stop all previous running docker containers
+            docker system prune -a | echo 'y' &&                                              <== Delete all previous running docker containers
+            docker run -d --rm --name flask-app-run -p 5000:5000 $IMG_NAME:$IMG_TAG"          <== Pull image from DockerHub and run it on port 5000
+```
+
+We can confirm running docker container
+
+<p align="left">
+  <img width="40%" height="40%" src="https://github.com/famasboy888/GitLab__CICD/assets/23441168/f3804cda-0f5b-47f4-b368-3414ad556ba6">
+</p>
+
+Our app is now running on container via port 5000
+
+<p align="left">
+  <img width="40%" height="40%" src="https://github.com/famasboy888/GitLab__CICD/assets/23441168/7239c6f0-6a08-4ce0-82a6-7a357c9ce51d">
+</p>
+
+
 
 
 
