@@ -53,3 +53,27 @@ build_image:
         - docker push $IMG_NAME:$IMG_TAG
 ```
 
+We notice that the jobs are ran in parallel. We don't want that so we use `stages` key:
+
+```yaml
+variables:
+    ...
+
+stages:                  <== define stages and order of the jobs
+    - test
+    - build
+
+run_tests:
+    stage: test          <== specify the stage
+    ...
+
+build_image:
+    stage: build         <== specify the stage
+    ...
+```
+
+You will have a sequenced job after:
+
+<p align="left">
+  <img width="40%" height="40%" src="https://github.com/famasboy888/GitLab__CICD/assets/23441168/f96132a5-c10a-477e-b2a7-a486506e1092">
+</p>
