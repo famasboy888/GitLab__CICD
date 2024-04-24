@@ -1,4 +1,4 @@
-# GitLab CICD Pipeline
+# GitLab CICD Pipeline + Deploy to EC2 instance
 Pipe line can be found in mmy GitLab Repo: [.gitlab-ci.yml](https://gitlab.com/kyleyap/cicd/-/blob/main/.gitlab-ci.yml)
 
 Our pipeline will deploy this kind of application.
