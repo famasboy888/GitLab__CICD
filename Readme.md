@@ -1,9 +1,14 @@
 # GitLab CICD Pipeline
 Pipe line can be found in mmy GitLab Repo: [.gitlab-ci.yml](https://gitlab.com/kyleyap/cicd/-/blob/main/.gitlab-ci.yml)
 
+Our pipeline will deploy this kind of application.
+
 <p align="left">
   <img width="70%" height="70%" src="https://github.com/famasboy888/GitLab__CICD/assets/23441168/7239c6f0-6a08-4ce0-82a6-7a357c9ce51d">
 </p>
+
+---
+# Steps
 
 ## 1) Push or store code in GitLab repository.
 
@@ -132,7 +137,7 @@ Our app is now running on container via port 5000
   <img width="40%" height="40%" src="https://github.com/famasboy888/GitLab__CICD/assets/23441168/7239c6f0-6a08-4ce0-82a6-7a357c9ce51d">
 </p>
 
-
+Credits to [Nana](https://www.youtube.com/watch?v=qP8kir2GUgo)
 
 
 
