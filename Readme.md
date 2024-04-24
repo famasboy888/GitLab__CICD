@@ -1,4 +1,4 @@
-![image](https://github.com/famasboy888/GitLab__CICD/assets/23441168/f160b829-3f57-4359-be1f-8df320a39cc5)# GitLab CICD
+# GitLab CICD
 
 ## 1) Push or store code in GitLab repository.
 
