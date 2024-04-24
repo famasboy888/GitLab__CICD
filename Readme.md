@@ -6,13 +6,15 @@
   <img width="40%" height="40%" src="https://github.com/famasboy888/GitLab__CICD/assets/23441168/b1e53716-037d-46ea-9602-095b97720f9c">
 </p>
 
-### 2) Create a file called `.gitlab-ci.yml` in the root directory.
+### 2) Create the CI/CD Pipeline.
+
+#### 2.1) Create a file called `.gitlab-ci.yml` in the root directory
 
 <p align="left">
   <img width="40%" height="40%" src="https://github.com/famasboy888/GitLab__CICD/assets/23441168/dd145081-c034-43a0-93c2-a9ada1be6f58">
 </p>
 
-Create test job:
+#### 2.2) Create test job:
 
 ```yaml
 run_tests:                                               <== Name of the step
@@ -23,7 +25,7 @@ run_tests:                                               <== Name of the step
         - make test
 ```
 
-Create build job:
+#### 2.3) Create build job:
 
 - We need to first create an New Access Token from DockerHub.io
 - Copy the username and secret temporarily.
@@ -53,7 +55,7 @@ build_image:
         - docker push $IMG_NAME:$IMG_TAG
 ```
 
-We notice that the jobs are ran in parallel. We don't want that so we use `stages` key:
+#### 2.4) We notice that the jobs are ran in parallel. We don't want that so we use `stages` key:
 
 ```yaml
 variables:
